@@ -27,3 +27,7 @@ Use the following command to execute the project;
 ```bash
 java -jar interview-project-0.0.1-SNAPSHOT.jar
 ```
+
+## API Documentation
+
+https://app.swaggerhub.com/apis/suelmar/Tamanna-project/1.0.0
