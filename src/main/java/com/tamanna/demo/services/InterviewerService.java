@@ -5,6 +5,7 @@ import com.tamanna.demo.exception.EntityAlreadyExistsError;
 import com.tamanna.demo.exception.ValidationError;
 import com.tamanna.demo.model.dto.InterviewerDTO;
 import com.tamanna.demo.model.dto.InterviewerSlotDTO;
+import com.tamanna.demo.model.entity.Candidate;
 import com.tamanna.demo.model.entity.Interviewer;
 import com.tamanna.demo.model.repository.InterviewerRepository;
 import org.modelmapper.ModelMapper;
@@ -50,7 +51,8 @@ public class InterviewerService {
     }
 
     protected boolean isInterviewerExists(final Interviewer interviewer) {
-        return repository.exists(Example.of(new Interviewer().setName(interviewer.getName())));
+        final Optional<Interviewer> optionalInterviewer = repository.findOne(Example.of(new Interviewer().setName(interviewer.getName())));
+        return optionalInterviewer.isPresent() && optionalInterviewer.get().getId() != interviewer.getId();
     }
 
     public InterviewerDTO create(final InterviewerDTO interviewerDTO) throws EntityAlreadyExistsError {

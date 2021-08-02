@@ -17,6 +17,8 @@
 	
 	<properties>
 		<java.version>8</java.version>
+		<postgres.driver.version>42.2.23</postgres.driver.version>
+		<modelmapper.version>2.3.5</modelmapper.version>
 	</properties>
 	<dependencies>
 	        <dependency>
@@ -44,12 +46,12 @@
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>2.3.5</version>
+			<version>${modelmapper.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.5.2</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgres.driver.version}</version>
 		</dependency>
 
 		<dependency>
