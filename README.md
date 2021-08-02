@@ -13,6 +13,8 @@ Use the following docker command to initial the postgres container:
 docker run --name tamanna-project -e POSTGRES_PASSWORD=test123 -e POSTGRES_DB=project -p 5432:5432 -d postgres
 ```
 
+For futher details see [postgres docker hub page](https://hub.docker.com/_/postgres)
+
 ## Build JAR File
 
 Use the following maven command to build jar file:
@@ -30,4 +32,4 @@ java -jar interview-project-0.0.1-SNAPSHOT.jar
 
 ## API Documentation
 
-https://app.swaggerhub.com/apis/suelmar/Tamanna-project/1.0.0
+https://app.swaggerhub.com/apis/suelmar/tamanna-project/1.0.0
