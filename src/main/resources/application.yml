@@ -1,0 +1,20 @@
+debug: false
+server:
+  error:
+    include-message: always
+spring:
+  application:
+    name: tamanna-project
+  datasource:
+    url: jdbc:postgresql://localhost:5432/project
+    username: postgres
+    password: test123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        temp:
+          use_jdbc_metadata_defaults: false
